@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { supabaseServer } from "@/lib/supabase/server";
+import { supabaseServer } from "../../../lib/supabase/server";
 
 export async function GET() {
   try {
-    const supabase = supabaseServer();
+    const supabase = await supabaseServer();
     const { data, error } = await supabase.from("profiles").select("*").limit(10);
 
     if (error) {

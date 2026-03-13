@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { supabaseBrowser } from "@/lib/supabase/client";
+import { supabaseBrowser } from "../lib/supabase/client";
 
 type Profile = Record<string, unknown>;
 
